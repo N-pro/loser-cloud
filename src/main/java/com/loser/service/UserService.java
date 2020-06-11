@@ -1,12 +1,13 @@
 package com.loser.service;
 
+import com.loser.base.BaseService;
 import com.loser.entity.User;
 import com.loser.repository.UserRepositoty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserService extends BaseService<User> {
     @Autowired
     private UserRepositoty userRepositoty;
 

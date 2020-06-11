@@ -4,26 +4,15 @@ package com.loser.entity;
  * Model 用户
  */
 
+import com.loser.base.BaseModel;
+
 import javax.persistence.*;
 
-@Entity
-@Table(name = "loser_user")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class User extends BaseModel<User> {
 
     private String username;
 
     private String password;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return username;
