@@ -2,6 +2,7 @@ package com.loser.base;
 
 import com.baomidou.mybatisplus.annotation.*;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  * @author Jason
  * @version createTime 2020/6/11 23:31
  */
-public class BaseModel<T> {
+public class BasedEntity<T> implements Serializable {
 
     @TableId(type = IdType.ASSIGN_ID)
     private String id;

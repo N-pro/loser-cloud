@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.fasterxml.jackson.databind.ser.Serializers;
+import org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
@@ -18,7 +19,7 @@ import java.util.Map;
  * @author Jason
  * @version createTime 2020/6/11 23:31
  */
-public class BaseService<T> implements BaseMapper {
+public class BaseService<T extends BasedEntity> implements BaseMapper {
 
     @Autowired
     BaseMapper<T> mapper;

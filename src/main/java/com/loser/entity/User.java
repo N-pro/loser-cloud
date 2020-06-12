@@ -4,11 +4,9 @@ package com.loser.entity;
  * Model 用户
  */
 
-import com.loser.base.BaseModel;
+import com.loser.base.BasedEntity;
 
-import javax.persistence.*;
-
-public class User extends BaseModel<User> {
+public class User extends BasedEntity<User> {
 
     private String username;
 
